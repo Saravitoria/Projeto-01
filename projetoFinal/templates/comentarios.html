@@ -1,0 +1,32 @@
+{% extends 'conteudo.html' %}
+{% load static %}
+{% block content %}
+<form method="post"  enctype="multipart/form-data">{% csrf_token %} 
+
+
+    <div class="coment">
+        <div class="uf">
+            <div class="a">
+                <span>Filme</span>
+                {{ Comentarios.filme }}
+            </div>
+            <div class="a">
+                <span>Usuário</span>
+                {{ Comentarios.usuario }}
+            </div>
+        </div>
+        <div class="uf">
+            <div class="a">
+                <span>Comentário:</span>
+                {{ Comentarios.comentario }}
+            </div>
+            <input type="submit">
+        </div>
+    </div>
+
+  
+    
+
+</form>
+
+{% endblock %}

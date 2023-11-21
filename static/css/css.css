@@ -1,0 +1,292 @@
+@import url('https: //fonts.googleapis.com/css2? family= EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800 & display =swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kalam', cursive;
+    font-size: 19px;
+}
+.inicial{
+    color: #fff;
+    padding: 20px;
+    border: 4px solid #02796f;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px #000;
+    background-color: #02796f6c;
+    margin: 30px 90px;
+}
+.inicial h1, p{
+    text-align: center;
+}
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.Avatar{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    position: relative;
+    width: 325px;
+    height: 550px;
+    background: #000;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .2);
+}
+
+.poster{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.poster::before{
+    content: '';
+    position: absolute;
+    bottom: -45%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: .3s;
+}
+
+.card:hover .poster::before{
+    bottom: 0;
+}
+
+.poster > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+   
+}
+
+.card:hover .poster img{
+    transform: scale(1.1);
+}
+
+.detalhes{
+    position: absolute;
+    bottom: -200%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 1.5em 1.5em 2em;
+    background: #000a;
+    backdrop-filter: blur(16px) saturate(120%);
+    transition: .3s;
+    color: #fff;
+    z-index: 2;
+}
+
+.card:hover .detalhes{
+    bottom: 0;
+}
+
+.detalhes h1,
+.detalhes h2{
+    font-weight: 550;
+}
+
+.detalhes h1{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.detalhes h2{
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 10px;
+  opacity: .6;
+}
+
+.detalhes .avaliacao{
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    gap: .25em;
+}
+
+.detalhes .avaliacao i{
+    color: #e3c414;
+}
+
+.detalhes .avaliacao span{
+    margin-left: 0.25em;
+}
+
+.detalhes .tags{
+    display: flex;
+    gap: .375em;
+    margin-bottom: .875em;
+    font-size: 8px;
+    border-radius: 4px;
+    border-radius: 50px;
+}
+
+.detalhes .tags span{
+    padding: .35rem .65rem;
+    color: #fff;
+    border: 1.5px solid rgba(255 255 255 / 0.4);
+    border-radius: 4px;
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+.detalhes .descricao{
+    color: #fff;
+    opacity: .8;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    font-size: 16px;
+    text-align: left;
+    
+}
+
+.detalhes .cast h3{
+    margin-bottom: .5em;
+}
+.detalhes .cast ul{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    width: 100%;
+}
+.detalhes .cast ul li{
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5px solid #fff;
+}
+.detalhes .cast ul li img{
+    width: 100%;
+    height: 100%;
+}
+
+/* o outro css */
+
+
+.head > nav ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 30px;
+}
+.head > nav ul li {
+    display: inline;
+    margin-left: 50px;
+}
+.head > nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    
+}
+body{
+    background-image: url(/static/imagens/imagem.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* # # # Login  */
+.login{
+    width: 50%;
+    margin: 90px auto;
+    color: #fff;
+    padding: 80px;
+    border: 4px solid #02796f;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px #000;
+    background-color: #02796f42;
+}
+.login {
+    text-align: center;
+}
+.login > label{
+    display: block;
+}
+.login > input, fieldset input{
+    width: 80%;
+    border-color: rgb(126, 243, 243);
+    outline: none;
+}
+.login > input[type=submit]{
+    width: 19%;
+    background-color: aquamarine;
+    display: block;
+    margin: 15px auto;
+    box-shadow: 0 0 40px #54d4ca inset, 0 0 0 0 #02796f;
+    transition: all 150ms ease-in-out;
+    
+    &:hover{
+        box-shadow: 0 0 10px 0 #3a7a75 inset, 0 0 10px 4px #5db8b0 
+    }
+}
+.form-text{
+    margin-bottom: 15px;
+}
+
+/* cadastro da resenha/comentários   */
+fieldset {
+    background-color: #fff8;
+}
+
+fieldset label{
+    display: block;
+}
+
+.coment{
+    background-repeat: no-repeat;
+    margin: 40px;
+    background-color: rgba(57, 158, 150, 0.651);
+    border-radius: 20px;
+    border: 4px solid rgb(7, 49, 49);
+    height: 100vh;
+    box-shadow: 1px 1px 5px #000;
+    
+}
+
+.coment .uf{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+/* .coment input[type=submit]{
+    height: 40px;
+    background-color: aquamarine;
+    width: 19%;
+    display: block;
+    margin: 19px auto;
+    box-shadow: 0 0 50px #43b3a9 inset, 0 0 0 0 #02796f;
+    transition: all 150ms ease-in-out;
+
+    &:hover{
+        box-shadow: 0 0 10px 0 #3a7a75 inset, 0 0 10px 4px #6bdbd2 
+    } */

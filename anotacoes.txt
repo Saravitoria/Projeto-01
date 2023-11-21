@@ -1,0 +1,18 @@
+PROJECT MOVIES
+
+tela de entrada ✔️
+( e-mail e senha )
+
+página inicial✔️
+introdução à página✔️
+apresentação dos filmes✔️
+
+resenha/comentários 
+conectar filme ao comentário✔️
+usuário
+filme
+comentário 
+postagem
+
+
+ 

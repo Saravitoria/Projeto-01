@@ -1,0 +1,223 @@
+{% extends 'conteudo.html' %}
+{% load static %}
+{% block content %}
+
+
+    <div class="inicial">
+        <h1>Saudações!</h1>
+        <p> Apertem os cintos, desliguem os pensamentos da terra, e se preparem para um universo de possibilidades com criaturas exóticas e problemas de outro mundo! (literalmente)
+           <br>
+            Apresento a todos os terráqueos aqui presentes não o meu, mas nosso site de filmes aclamados pelo público desde Arrakis até Pandora! Saiba um pouco desses longas com mundos estranhos e personagens pra lá de intrigantes💫
+            <br>
+            Aproveite a oportunidade e, se quiser, adicione um comentário compartilhando conosco sua opinião sobre algum filme! Sem mais delongas vamos lá meu caro jovem Padawan, e que a força esteja com você!🚀
+        </p>
+    </div>
+    
+
+
+
+
+
+    <div class="body">
+        <div class="Avatar">
+            <div class="card">
+            <a href="{% url 'comentarios' %}">
+                <div class="poster">
+                        <img src="/static/imagens/Avatar.jpg" alt="Avatar">
+                </div>
+                <div class="detalhes">
+                    <h1>{{ f.titulo }}</h1>
+                    <h2>{{f.ano}} - {{f.duracao}}</h2>
+                    <div class="avaliacao">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>{{f.avaliacao}}/5</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">{{f.genero}}</span>
+                        <!-- <span class="tag">Ficção Científica</span> -->
+                    </div>
+                    <p class="descricao">
+                        {{ f.descricao }}
+                    </p>
+                    <div class="cast">
+                     <h3>Cast</h3>
+                    <ul>
+                        <li><img src="/static/imagens/Sam Worthington.png" alt="Sam Worthington" title="Sam Worthington"></li>
+                        <li><img src="/static/imagens/Elizabeth Olsen.png" alt="Elizabeth Olsen" title="Elizabeth Olsen"></li>
+                        <li><img src="/static/imagens/Sigourney Weaver .png" alt="Sigourney Weaver" title="Sigourney Weaver"></li>
+                    </ul>
+                    </div>
+            </a>    
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="{% url 'comentarios' %}">
+                    <div class="poster">
+                        <img src="/static/imagens/gravidade.png" alt="Gravidade"></div>
+                    <div class="detalhes">
+                        <h1>Gravidade</h1>
+                        <h2>2013 • 1hr 31min</h2>
+                        <div class="avaliacao">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.1/5</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Thriller</span>
+                            <span class="tag">Ficção Científica</span>
+                        </div>
+                        <p class="descricao">
+                            Dra. Ryan Stone e o astronauta Matt Kowalsky trabalham juntos para sobreviver depois de um acidente os deixa completamente a deriva no espaço, sem ligação com a terra e sem esperança de resgate.
+                        </p>
+                        <div class="cast">
+                            <h3>Cast</h3>
+                            <ul>
+                                <li><img src="/static/imagens/sandrabullock.png" alt="Sandra Bullock" title="Sandra Bullock"></li>
+                                <li><img src="/static/imagens/georgeclooney.png" alt="George Clooney" title="George Clooney"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="{% url 'comentarios' %}">
+                    <div class="poster">
+                        <img src="/static/imagens/interestellar.png" alt="Duna"></div>
+                    <div class="detalhes">
+                        <h1>Interestellar</h1>
+                        <h2>2014 • 2hr 49min</h2>
+                        <div class="avaliacao">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.9/5</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Aventura</span>
+                            <span class="tag">Ficção Científica</span>
+                        </div>
+                        <p class="descricao">
+                           Em um futuro distante, os recursos naturais da terra estão diminuindo e a humanidade deverá migrar para outros planetas.
+                        </p>
+                        <div class="cast">
+                            <h3>Cast</h3>
+                            <ul>
+                                <li><img src="/static/imagens/matthew.png" alt="Matthew Mcconaughey" title="Matthew Mcconaughey"></li>
+                                <li><img src="/static/imagens/jessicachastain.png" alt="Jessica Chastain" title="Jessica Chastain"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+            <a href="{% url 'comentarios' %}">                
+                <div class="poster">
+                    <img src="/static/imagens/perdidomarte.png" alt="Perdido em Marte"></div>
+                    <div class="detalhes">
+                        <h1>Perdido em Marte</h1>
+                        <h2>2015 • 2hr 24min</h2>
+                        <div class="avaliacao">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.8/5</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Aventura</span>
+                            <span class="tag">Ficção Científica</span>
+                        </div>
+                        <p class="descricao">
+                          Um astronautaa é dado como morto ficando preso e sozinho em Marte, tendo que usar sua criatividade e inteligência para sobreviver sem comunicação com a Terra 
+                        </p>
+                        <div class="cast">
+                            <h3>Cast</h3>
+                            <ul>
+                                <li><img src="/static/imagens/mattdamon.png" alt="Matt Damon" title="Matt Damon"></li>
+                                <li><img src="/static/imagens/jessicachastain.png" alt="Jessica Chastain" title="Jessica Chastain"></li>
+                            </ul>
+                        </div>
+                    </div>
+            </a>
+            </div>
+            <div class="card">
+                <a href="{% url 'comentarios' %}">
+                <div class="poster">
+                    <img src="/static/imagens/Duna.png" alt="Duna"></div>
+                    <div class="detalhes">
+                        <h1>Duna</h1>
+                        <h2>2021 • 2hr 35min</h2>
+                        <div class="avaliacao">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.1/5</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Drama</span>
+                            <span class="tag">Ficção Científica</span>
+                        </div>
+                        <p class="descricao">
+                            Paul Atreides é um jovem brilhante, dono de um destino além de sua compreensão. Ele deve viajar para o planeta mais perigoso do universo para garantir o futuro de seu povo.
+                        </p>
+                        <div class="cast">
+                            <h3>Cast</h3>
+                            <ul>
+                                <li><img src="/static/imagens/timohee.png" alt="Timothée Chalamet" title="Timothée Chalamet"></li>
+                                <li><img src="/static/imagens/zendaya.png" alt="Zendaya" title="Zendaya"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="card">
+            <a href="{% url 'comentarios' %}">                
+                <div class="poster"><img src="/static/imagens/starwars.png" alt="Star Wars - Guardiões da Galáxia "></div>
+                <div class="detalhes">
+                    <h1>Guardiões da Galáxia Vol.3</h1>
+                    <h2>2023 • 2hr 29min</h2>
+                    <div class="avaliacao">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>4.5/5</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag yellow">Ação</span>
+                        <span class="tag">Ficção Científica</span>
+                    </div>
+                    <div class="descricao">
+                        Peter Quill deve reunir sua equipe para defender o universo e proteger um dos seus. Se a missão não for totalmente bem-sucedida, isso pode levar ao fim dos Guardiões.
+                    </div>
+                    <div class="cast">
+                        <h3>Cast</h3>
+                        <ul>
+                            <li><img src="/static/imagens/chrispratt.png" alt="Chris Pratt" title="Chris Pratt"></li>
+                            <li><img src="/static/imagens/vindiesel.png" alt="Vin diesel" title="Vin diesel"></li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'conteudo.html' %}
+{% load static %}
+{% block content %}
+{% for r in resenha %}
+
+<fieldset>
+    <legend>Comentários</legend>
+    <label for="">Filme</label>
+    <span>{{ r.filme }} </span>
+    
+    
+    <label for="">Usuário</label>
+    <span>{{ r.usuario }} </span>
+    
+    
+    <label for="">Comentário</label>
+    <span>{{ r.comentario }} </span>
+</fieldset>
+
+{% endfor %}
+{% endblock %}

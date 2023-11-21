@@ -1,0 +1,21 @@
+{% extends 'conteudo.html' %}
+{% load static %} 
+{% block content %} 
+
+<form class="login" action="#" method="post">
+       
+    <div class="form-text">{% csrf_token %}
+        <p>O mistério da vida não é um problema a ser resolvido. Mas uma realidade a ser vivida - Duna</p>
+    </div>
+
+    <label for="email">Email:</label>
+    <input type="text" name="username" id="email">
+
+    <label for="Senha">Senha:</label>
+    <input type="password" name="password" id="Senha">
+
+    <input type="submit" value="Entrar">
+
+</form>
+
+{% endblock %}
