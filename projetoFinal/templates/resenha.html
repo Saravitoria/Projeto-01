@@ -1,21 +1,36 @@
 {% extends 'conteudo.html' %}
 {% load static %}
 {% block content %}
+
+
+
+<h1 style="color: #fff; text-align: center; margin: 100px;">Comentários Registrados: {{ resenha|length }}</h1> <!-- Isso é para django fazer uma contagem da quantidade de comentários cadastrados no banco de dados -->
+
+{% if resenha %} <!-- Um 'if resenha' é para caso tenha algum comentário em resenha vai mostrar o que está abaixo dessea condição -->
+
 {% for r in resenha %}
 
 <fieldset>
-    <legend>Comentários</legend>
-    <label for="">Filme</label>
-    <span>{{ r.filme }} </span>
-    
-    
-    <label for="">Usuário</label>
-    <span>{{ r.usuario }} </span>
-    
-    
-    <label for="">Comentário</label>
-    <span>{{ r.comentario }} </span>
+        <legend>Comentário do Filme {{ r.filme }}</legend>
+        
+        <div class="user">
+            <label for="">Usuário:</label>
+            <span>{{ r.usuario }} </span>
+        </div>
+        
+        
+        <label for="">Comentário:</label>
+        <span>{{ r.comentario }} </span>
+        <a href="{% url 'remove' id=r.id %}">Deletar Comentário</a>
 </fieldset>
 
 {% endfor %}
+
+
+{% else %} <!-- Caso não tenha nenhum comentário em resenha, vai mostrar o que está abaixo do else, ou seja, o h2.  -->
+
+<h2 style="color: #fff; text-align: center; margin: 100px;">Sem Comentários para mostrar no Momento!</h2> <!-- Um h2 para mostrar caso não tenha nenhum comentário -->
+
+
+{% endif %} <!-- Esse endif é uma sinalização que o django compreende que é uma finalização de sua condição -->
 {% endblock %}

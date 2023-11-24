@@ -17,4 +17,13 @@ class Filme(models.Model):
 class Comentarios(models.Model):
     filme = models.ForeignKey(Filme,on_delete=models.PROTECT)
     usuario = models.CharField(max_length=80)
-    comentario = models.TextField() 
+    comentario = models.TextField()
+
+# -------------------------------------------------------------------------------------------------------------------------------------
+    regist = models.DateTimeField(auto_now_add=True)
+
+
+    class Meta:
+        ordering = ['-regist'] # Isso é para que os uma organização para que os comentários sejam registrados na ordem de data no Admin
+    def __str__(self):
+        return str(f'Filme:  {self.filme} | Com o cometário: {self.comentario}')

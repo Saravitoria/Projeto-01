@@ -252,41 +252,70 @@ body{
     margin-bottom: 15px;
 }
 
-/* cadastro da resenha/comentários   */
-fieldset {
-    background-color: #fff8;
+/* comentarios */
+
+.form-comentario{
+    width: 80%;
+    margin: 100px auto;
+    color: #fff;
+    padding: 20px;
 }
 
-fieldset label{
+/* .form-comentario label, input{
     display: block;
+} */
+.form-comentario .bloco1{
+   display: flex;
+   justify-content: space-between; 
+   margin-bottom: 20px;
+}  
+.form-comentario .bloco1 .item1, .bloco1 .item1 input, .bloco1 .item1 select{
+   width: 85%;
+}
+.form-comentario .bloco2 .item2 textarea{
+    width: 100%;
+    resize: none;
+    height: 150px;
+}
+.form-comentario > input{
+    width: 100px;
+    margin: 20px;
+    color: #fff;
+    background-color: #02978b;
 }
 
-.coment{
-    background-repeat: no-repeat;
-    margin: 40px;
-    background-color: rgba(57, 158, 150, 0.651);
-    border-radius: 20px;
-    border: 4px solid rgb(7, 49, 49);
-    height: 100vh;
-    box-shadow: 1px 1px 5px #000;
-    
-}
+ /* resenha */
 
-.coment .uf{
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-
-/* .coment input[type=submit]{
-    height: 40px;
-    background-color: aquamarine;
-    width: 19%;
+ fieldset{
+    color: #fff;
+    background-color: #02998c3b;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+ }
+ fieldset > label{
     display: block;
-    margin: 19px auto;
-    box-shadow: 0 0 50px #43b3a9 inset, 0 0 0 0 #02796f;
-    transition: all 150ms ease-in-out;
+ }
 
-    &:hover{
-        box-shadow: 0 0 10px 0 #3a7a75 inset, 0 0 10px 4px #6bdbd2 
-    } */
+ .user{
+    padding-bottom: 20px;
+ }
+
+
+
+
+
+
+ /* O a do fieldset para o lado esquedo da tela */
+
+ fieldset > a {
+    display: block;
+    text-align: end;
+    text-decoration: none;
+    color: #f44;
+ }
+ fieldset > a:hover {
+    color: #f00;
+    text-decoration: underline;
+ }

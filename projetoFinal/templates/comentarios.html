@@ -1,32 +1,38 @@
 {% extends 'conteudo.html' %}
 {% load static %}
 {% block content %}
-<form method="post"  enctype="multipart/form-data">{% csrf_token %} 
+<form class="form-comentario" method="post"  enctype="multipart/form-data">{% csrf_token %} 
 
 
-    <div class="coment">
-        <div class="uf">
-            <div class="a">
-                <span>Filme</span>
+    <div class="bloco1">
+
+        <div class="item1">
+            <label for="">Filme:</label>
                 {{ Comentarios.filme }}
-            </div>
-            <div class="a">
-                <span>Usuário</span>
+        </div>
+        
+        <div class="item1">
+            <label for="">Usuário:</label>
                 {{ Comentarios.usuario }}
-            </div>
         </div>
-        <div class="uf">
-            <div class="a">
-                <span>Comentário:</span>
-                {{ Comentarios.comentario }}
-            </div>
-            <input type="submit">
-        </div>
-    </div>
 
+    </div>
+            
+        
+        <div class="bloco2">
+
+            <div class="item2">
+                <label for="">Comentário:</label>
+                    {{ Comentarios.comentario }}
+            </div>
+
+        </div>
+       <input type="submit">
+    
   
     
 
 </form>
+
 
 {% endblock %}

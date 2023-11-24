@@ -29,4 +29,5 @@ urlpatterns = [
     path('formulario/', views.formulario, name='formulario'),
     path('comentarios/', views.comentarios, name='comentarios'),
     path('resenha/', views.resenha, name='resenha'),
+    path('resenha/remove/<int:id>', views.remove, name = 'remove'),
 ]+static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)  

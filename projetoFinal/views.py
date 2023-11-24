@@ -36,3 +36,8 @@ def comentarios(request):
         return redirect('pagina')
     else:
         return render(request, 'comentarios.html', {'Comentarios':coment})   
+    
+def remove(request, id):
+    remove = models.Comentarios.objects.get(id=id)
+    remove.delete()
+    return redirect('resenha')    

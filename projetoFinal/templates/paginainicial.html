@@ -5,7 +5,7 @@
 
     <div class="inicial">
         <h1>Saudações!</h1>
-        <p> Apertem os cintos, desliguem os pensamentos da terra, e se preparem para um universo de possibilidades com criaturas exóticas e problemas de outro mundo! (literalmente)
+        <p> Apertem os cintos, desliguem os pensamentos da terra, e se preparem para um universo de possibilidades com criaturas exóticas e problemas   de outro mundo! (literalmente)
            <br>
             Apresento a todos os terráqueos aqui presentes não o meu, mas nosso site de filmes aclamados pelo público desde Arrakis até Pandora! Saiba um pouco desses longas com mundos estranhos e personagens pra lá de intrigantes💫
             <br>
@@ -17,13 +17,16 @@
 
 
 
-
+{% if filme %}
     <div class="body">
         <div class="Avatar">
+
+            {% for f in filme %}
+
             <div class="card">
             <a href="{% url 'comentarios' %}">
                 <div class="poster">
-                        <img src="/static/imagens/Avatar.jpg" alt="Avatar">
+                        <img src="{{ f.ftFundo.url }}" alt="Avatar"> <!-- Imagem -->
                 </div>
                 <div class="detalhes">
                     <h1>{{ f.titulo }}</h1>
@@ -55,7 +58,15 @@
                 </div>
             </div>
 
-            <div class="card">
+            {% endfor %}
+
+{% else %}
+
+<h2>Sem Filmes cadastrados!</h2>
+
+{% endif %}
+
+            <!-- <div class="card">
                 <a href="{% url 'comentarios' %}">
                     <div class="poster">
                         <img src="/static/imagens/gravidade.png" alt="Gravidade"></div>
@@ -87,6 +98,7 @@
                     </div>
                 </a>
             </div>
+
             <div class="card">
                 <a href="{% url 'comentarios' %}">
                     <div class="poster">
@@ -119,6 +131,7 @@
                     </div>
                 </a>
             </div>
+
             <div class="card">
             <a href="{% url 'comentarios' %}">                
                 <div class="poster">
@@ -151,6 +164,7 @@
                     </div>
             </a>
             </div>
+
             <div class="card">
                 <a href="{% url 'comentarios' %}">
                 <div class="poster">
@@ -214,7 +228,7 @@
                     </div>
                 </div>
             </a>
-            </div>
+            </div> -->
         </div>
     </div>
     </div>
