@@ -302,7 +302,10 @@ body{
     padding-bottom: 20px;
  }
 
-
+.detalhes > a{
+    text-decoration: none;
+    color: #fff;
+}
 
 
 
@@ -315,7 +318,10 @@ body{
     text-decoration: none;
     color: #f44;
  }
+
  fieldset > a:hover {
     color: #f00;
     text-decoration: underline;
  }
+
+ 
