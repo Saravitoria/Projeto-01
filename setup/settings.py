@@ -135,5 +135,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REQUIRED_URL='/'
-LOGOUT_REQUIRED_URL='accounts/login/'
+LOGIN_REQUIRED_URL='formulario/'
+LOGOUT_REQUIRED_URL=''

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from . import models, forms 
 
-@login_required
+# @login_required
 def pagina(request):
     filme= models.Filme.objects.all()
     return render(request, 'paginainicial.html', {'filme':filme}) 
@@ -17,6 +17,7 @@ def conteudo(request):
 def cadastro(request):
     return render(request, 'cadastro.html') 
 
+@login_required
 def formulario(request):
     form= forms.Filmeform(request.POST or None, request.FILES or None)
 
@@ -26,6 +27,7 @@ def formulario(request):
         return redirect('pagina')
     else:
         return render(request, 'form.html', {'Filme':form})
+
     
 def comentarios(request):
     coment= forms.Coment(request.POST or None, request.FILES or None)
