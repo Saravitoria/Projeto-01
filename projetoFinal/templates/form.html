@@ -1,0 +1,100 @@
+{% extends 'conteudo.html' %}
+{% load static %} 
+{% block content %} 
+
+    <style>
+       
+
+        table {
+            width: 100%;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        td {
+            padding: 10px;
+            background-color: #04635b52;
+            border-radius: 4px;
+            border: solid 3px #006b62;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select, textarea {
+            width: calc(100% - 16px);
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #0a6b63;
+            color: #fff;
+            padding: 10px 20px;
+            border: #06dac8;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class=".body">
+
+    <form action="#" method="post" enctype="multipart/form-data">{% csrf_token %} 
+
+        <table class=".tab">
+            <tr>
+                <td>
+                    <label for="ano">Ano:</label>
+                    {{ Filme.ano }}
+                </td>
+                <td>
+                    <label for="duracao">Duração:</label>
+                    <!-- <input type="text" id="duracao" name="duracao" required> -->
+                    {{Filme.duracao}}
+                </td>
+                <td>
+                    <label for="genero">Gênero:</label>
+                    <!-- <input type="text" id="genero" name="genero" required> -->
+                    {{Filme.genero}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="titulo">Título:</label>
+                    <!-- <input type="text" id="titulo" name="titulo" required> -->
+                    {{Filme.titulo}}
+                </td>
+                <td>
+                    <label for="foto">Foto de Fundo:</label>
+                    <!-- <input type="url" id="foto" name="foto" required> -->
+                    {{Filme.ftFundo}}
+                </td>
+                <td>
+                    <label for="avaliacao">Avaliação:</label>
+                    <!-- <input type="number" id="avaliacao" name="avaliacao" min="0" max="10" step="0.1" required> -->
+                    {{Filme.avaliacao}}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                    <button type="submit">Enviar</button>
+                </td>
+            </tr>
+           
+        </table>
+        
+        
+       
+    </form>
+   
+</body>
+</html>
+{% endblock %}
